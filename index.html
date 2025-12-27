@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypingDev - Modern Typing Trainer</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="logo">
+          <span class="logo-icon">⌨️</span>
+          <span class="logo-text">Swift<span style="color: var(--accent-primary)">Keys</span></span>
+        </div>
+      </div>
+      <div class="nav-center">
+        <button class="nav-btn" id="nav-test" data-active="true">
+          <span class="nav-icon">⚡</span>
+          <span>test</span>
+        </button>
+        <button class="nav-btn" id="nav-missions">
+          <span class="nav-icon">🎯</span>
+          <span>missions</span>
+        </button>
+        <button class="nav-btn" id="nav-leaderboard">
+          <span class="nav-icon">🏆</span>
+          <span>leaderboard</span>
+        </button>
+        <button class="nav-btn" id="nav-sound">
+          <span class="nav-icon">🔊</span>
+          <span>sound</span>
+        </button>
+        <button class="nav-btn" id="nav-keyboard">
+          <span class="nav-icon">🎹</span>
+          <span>keyboard</span>
+        </button>
+      </div>
+      <div class="nav-right">
+        <button class="sign-in-btn" id="sign-in-btn">
+          <span class="crown-icon">👑</span>
+          <span>sign in to save your result</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-container" id="main-container">
+      <!-- Test Configuration -->
+      <div class="test-config" id="test-config">
+        <div class="config-row">
+          <div class="config-group">
+            <button class="config-btn" data-type="punctuation">@ punctuation</button>
+            <button class="config-btn" data-type="numbers"># numbers</button>
+            <button class="config-btn active" data-type="time">🕐 time</button>
+            <button class="config-btn" data-type="words">📝 words</button>
+            <button class="config-btn" data-type="quote">💬 quote</button>
+            <button class="config-btn" data-type="zen">🧘 zen</button>
+            <button class="config-btn" data-type="custom">✏️ custom</button>
+          </div>
+        </div>
+        
+        <!-- Language Selection (New) -->
+        <div class="config-row" id="language-config" style="margin-top: 0.5rem; display: none;">
+           <div class="config-group">
+             <span style="color: var(--text-muted); font-size: 0.9rem; align-self: center;">Lang:</span>
+             <button class="config-btn active" data-lang="javascript">JS</button>
+             <button class="config-btn" data-lang="python">Python</button>
+             <button class="config-btn" data-lang="cpp">C++</button>
+             <button class="config-btn" data-lang="bash">Bash</button>
+           </div>
+        </div>
+
+        <div class="config-row">
+          <div class="config-values" id="config-values">
+            <button class="value-btn" data-value="15">15</button>
+            <button class="value-btn" data-value="30">30</button>
+            <button class="value-btn active" data-value="60">60</button>
+            <button class="value-btn" data-value="120">120</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Virtual Keyboard -->
+      <div id="virtual-keyboard" class="virtual-keyboard hidden" style="margin-bottom: 2rem;"></div>
+
+      <!-- Typing Test Area -->
+      <div class="typing-area" id="typing-area">
+        <!-- This will be populated dynamically -->
+      </div>
+
+      <!-- Results Area -->
+      <div class="results-area hidden" id="results-area">
+        <!-- This will be populated after test completion -->
+      </div>
+    </div>
+  </main>
+  
+  <!-- Custom Text Modal -->
+  <div id="custom-text-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Custom Text</h2>
+      <p>Paste your code or text below to practice:</p>
+      <textarea id="custom-text-input" placeholder="// Paste your code here..." spellcheck="false"></textarea>
+      <div class="modal-actions">
+        <button id="cancel-custom-text" class="action-btn">Cancel</button>
+        <button id="start-custom-text" class="action-btn primary">Start Practice</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#" class="footer-link">contact</a>
+        <a href="#" class="footer-link">support</a>
+        <a href="#" class="footer-link">github</a>
+      </div>
+      <div class="footer-shortcuts">
+        <span class="shortcut-hint">
+          <kbd>tab</kbd> + <kbd>enter</kbd> - restart test
+        </span>
+        <span class="shortcut-hint">
+          <kbd>esc</kbd> - command line
+        </span>
+      </div>
+    </div>
+    <div class="footer-bottom" style="text-align: center; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.8rem;">
+      &copy; 2025 imsabbar. All rights reserved.
+    </div>
+  </footer>
+  
+  <!-- Load JavaScript files in order -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/user.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/missions.js"></script>
+  <script src="assets/js/sound.js"></script>
+  <script src="assets/js/keyboard.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

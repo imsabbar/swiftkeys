@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "name": "QWERTY Basics",
+    "description": "Master the home row and basic letters.",
+    "level": "beginner",
+    "language": "general",
+    "time": 30,
+    "exercises": [
+      "asdf jkl;",
+      "qwertyuiop",
+      "zxcvbnm",
+      "the quick brown fox"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Numbers & Symbols",
+    "description": "Practice numbers and common symbols.",
+    "level": "beginner",
+    "language": "general",
+    "time": 30,
+    "exercises": [
+      "1234567890",
+      "!@#$%^&*()",
+      "let x = 10;",
+      "const y = \"hello\";"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Common Punctuation",
+    "description": "Get comfortable with punctuation marks.",
+    "level": "beginner",
+    "language": "general",
+    "time": 30,
+    "exercises": [
+      "{} [] () ; : , .",
+      "if (x > 0) { return true; }",
+      "const arr = [1, 2, 3];",
+      "Hello, world! How are you?"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Code Snippets",
+    "description": "Type real programming code.",
+    "level": "intermediate",
+    "language": "javascript",
+    "time": 45,
+    "exercises": [
+      "function greet(name) { return `Hello, ${name}!`; }",
+      "for (let i = 0; i < 5; i++) { console.log(i); }",
+      "try { risky(); } catch (e) { handle(e); }",
+      "const result = a != null ? a : b;"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "JavaScript Patterns",
+    "description": "Common JavaScript coding patterns.",
+    "level": "intermediate",
+    "language": "javascript",
+    "time": 40,
+    "exercises": [
+      "const users = await fetch(\"/api/users\");",
+      "arr.filter(x => x.active).map(x => x.name)",
+      "export default class Component {}",
+      "import { useState, useEffect } from \"react\";"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Speed Challenge",
+    "description": "Type as fast as you can!",
+    "level": "intermediate",
+    "language": "javascript",
+    "time": 20,
+    "exercises": [
+      "console.log(\"Speed test!\");",
+      "let multiply = (x) => x * 2;",
+      "while (count > 0) { count--; }",
+      "const obj = { a: 1, b: 2, c: 3 };"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Complex Algorithms",
+    "description": "Advanced coding patterns and algorithms.",
+    "level": "pro",
+    "language": "javascript",
+    "time": 60,
+    "exercises": [
+      "const quickSort = arr => arr.length <= 1 ? arr : [].concat(",
+      "...quickSort(arr.slice(1).filter(x => x <= arr[0])),",
+      "arr[0], ...quickSort(arr.slice(1).filter(x => x > arr[0])))",
+      "return memoize((n) => n <= 1 ? n : fib(n-1) + fib(n-2));"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "React Components",
+    "description": "Modern React component patterns.",
+    "level": "pro",
+    "language": "javascript",
+    "time": 50,
+    "exercises": [
+      "const [state, setState] = useState({ loading: false });",
+      "useEffect(() => { fetchData().then(setData); }, []);",
+      "return <div className=\"container\">{children}</div>;",
+      "export const Button = ({ onClick, children }) => (...);"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Regex & Patterns",
+    "description": "Regular expressions and complex patterns.",
+    "level": "pro",
+    "language": "javascript",
+    "time": 45,
+    "exercises": [
+      "const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;",
+      "text.replace(/\\s+/g, \" \").trim().split(\" \");",
+      "const pattern = /(?:https?:\\/\\/)?[\\w.-]+\\.[a-z]{2,}/gi;",
+      "str.match(/\\d{3}-\\d{3}-\\d{4}/) || \"Invalid phone\";"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Terminal Commands",
+    "description": "Master common terminal and git commands.",
+    "level": "pro",
+    "language": "bash",
+    "time": 35,
+    "exercises": [
+      "git add . && git commit -m \"feat: add new feature\"",
+      "docker run -d -p 3000:3000 --name app my-app:latest",
+      "find . -name \"*.js\" -type f | xargs grep -l \"TODO\"",
+      "curl -X POST -H \"Content-Type: application/json\" -d"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Python Basics",
+    "description": "Essential Python syntax and data structures.",
+    "level": "intermediate",
+    "language": "python",
+    "time": 45,
+    "exercises": [
+      "def calculate_area(radius): return 3.14 * radius ** 2",
+      "numbers = [x for x in range(10) if x % 2 == 0]",
+      "with open('file.txt', 'r') as f: content = f.read()",
+      "import os; print(os.path.join('home', 'user', 'docs'))"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Python Advanced",
+    "description": "Decorators, generators, and async/await in Python.",
+    "level": "pro",
+    "language": "python",
+    "time": 60,
+    "exercises": [
+      "@decorator\ndef my_func(arg): pass",
+      "yield from (x*x for x in range(10))",
+      "async def fetch_data(): await asyncio.sleep(1)",
+      "class MyClass(Base): def __init__(self): super().__init__()"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "C++ Fundamentals",
+    "description": "Pointers, references, and memory management.",
+    "level": "intermediate",
+    "language": "cpp",
+    "time": 50,
+    "exercises": [
+      "int* ptr = &value; *ptr = 100;",
+      "std::vector<int> vec = {1, 2, 3}; vec.push_back(4);",
+      "for(const auto& item : items) { std::cout << item; }",
+      "template <typename T> T max(T a, T b) { return a > b ? a : b; }"
+    ]
+  }
+]
